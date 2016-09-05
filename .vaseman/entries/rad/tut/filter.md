@@ -131,13 +131,13 @@ class GridDefinition extends AbstractFieldDefinition
                 ->set('onchange', 'this.form.submit()');
 
 			// Start Date
-			$form->calendar('start_date')
-				->label('Start Date')
-				->set('format', 'YYYY-MM-DD')
-				->set('placeholder', 'Start Date');
+			$this->add('start_date', new CalendarField)
+                		->label('Start Date')
+                		->set('format', 'YYYY-MM-DD')
+                		->set('placeholder', 'Start Date');
 
 			// End Date
-			$form->calendar('end_date')
+			$form->add('end_date', new CalendarField)
 				->label('End Date')
 				->set('format', 'YYYY-MM-DD')
 				->set('placeholder', 'End Date');
